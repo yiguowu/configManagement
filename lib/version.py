@@ -2,11 +2,12 @@ import inspect
 from lib.parameter import parameter
 
 class version:
-    def __init__(self, version, desc=None, freeze=False, driver=None):
+    def __init__(self, version, parent=None, desc=None, freeze=False, driver=None):
         self.version = version
         self.desc = desc
         self.freeze = freeze
         self.driver = driver
+        self.parent = parent
 
     def frozen(self):
         self.freeze = True

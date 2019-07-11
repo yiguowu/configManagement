@@ -8,6 +8,3 @@ class parameter:
 
     def updateValue(self, value, version):
         self.value = value
-
-
-

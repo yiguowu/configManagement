@@ -1,6 +1,6 @@
 from lib.etcdConnection import etcdConnection
 from lib.etcdSession import etcdSession
-from lib.versison import version
+from lib.version import version
 
 if __name__ == "__main__":
     cnt = etcdConnection()
