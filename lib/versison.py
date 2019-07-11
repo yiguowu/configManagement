@@ -1,4 +1,5 @@
 import inspect
+from lib.parameter import parameter
 
 class version:
     def __init__(self, version, desc=None, freeze=False, driver=None):
@@ -24,4 +25,3 @@ class version:
     def setDriver(self, drv):
         if self.validateDriver(drv):
             self.driver = drv
-        print(self.driver)
