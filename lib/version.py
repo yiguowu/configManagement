@@ -8,6 +8,15 @@ class version:
         self.freeze = freeze
         self.driver = driver
         self.parent = parent
+        self.prefix = "paramter/"+self.version+"/"
+        self.parameterList = []
+
+    def addParameter(self, param):
+        for i in self.parameterList:
+            if i.getKey() == param.getKey():
+                return False
+        self.parameterList.append(param)
+        return True
 
     def frozen(self):
         self.freeze = True
