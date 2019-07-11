@@ -1,8 +1,7 @@
 class parameter:
-    def __init__(self, key, status="active", state="dirty",type="string",value=None):
+    def __init__(self, key, status="active", state="dirty",value=None):
         self.key = key
         self.value = value
-        self.type = type
         self.status = status
         self.state = state
 
