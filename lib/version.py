@@ -25,6 +25,7 @@ class version:
         item["_metadata"]["desc"] = self.desc
         item["_metadata"]["freeze"] = self.freeze
         item["_metadata"]["parent"] = self.parent
+        item["_metadata"]["prefix"] = self.prefix
         for i in self.parameterList:
             key, entry = i.generateAPI()
             item[key] = entry
