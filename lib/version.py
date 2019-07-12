@@ -8,7 +8,7 @@ class version:
         self.freeze = freeze
         self.driver = driver
         self.parent = parent
-        self.prefix = "paramter/"+self.version+"/"
+        self.prefix = "parameter/"+self.version+"/"
         self.parameterList = []
 
     def addParameter(self, param):

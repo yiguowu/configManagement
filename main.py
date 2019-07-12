@@ -8,4 +8,4 @@ if __name__ == "__main__":
     version = version("1.2")
     version.setDriver(session)
     #session.writeVersion(version.generateAPL())
-    session.readVersion()
+    session.listVersion()
