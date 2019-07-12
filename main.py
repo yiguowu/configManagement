@@ -7,4 +7,4 @@ if __name__ == "__main__":
     session = etcdSession(connection=cnt)
     version = version("1.0")
     version.setDriver(session)
-    session.writeVersion(version.generateAPL())
+    session.readVersion()
