@@ -17,7 +17,19 @@ class version:
                 return False
         self.parameterList.append(param)
         return True
-    
+
+    def generateAPL(self):
+        item = {}
+        item['_metadata'] = {}
+        item["_metadata"]["version"] = self.version
+        item["_metadata"]["desc"] = self.desc
+        item["_metadata"]["freeze"] = self.freeze
+        item["_metadata"]["parent"] = self.parent
+        for i in self.parameterList:
+            key, entry = i.generateAPI()
+            item[key] = entry
+        return item
+
     def frozen(self):
         self.freeze = True
 
