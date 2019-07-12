@@ -13,12 +13,14 @@ class etcdSession:
                     self.connection.put(key,value)
 
     def listVersion(self):
+        versionList = set()
         val = self.connection.get_prefix("parameter")
-        print(val)
         for i, j in val:
-            print(i,j.key)
+            version = str(j.key).split('/')[1]
+            versionList.add(version)
+        return versionList
 
-    def readVersion(self):
+    def readVersion(self, version):
         val = self.connection.get("parameter/1.1/_metadata/version")
         print(val)
 

@@ -5,7 +5,7 @@ from lib.version import version
 if __name__ == "__main__":
     cnt = etcdConnection()
     session = etcdSession(connection=cnt)
-    version = version("1.2")
+    version = version("1.3")
     version.setDriver(session)
-    #session.writeVersion(version.generateAPL())
+    session.writeVersion(version.generateAPL())
     session.listVersion()
